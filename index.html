@@ -1,0 +1,157 @@
+<!Doctype html>
+<html lan="en" data-framework="backbonejs">
+	<head>
+		<meta-charset="utf-8">
+		<title>Bill's Photography</title>
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="nvs7c4jprko9my9"></script>
+	</head>
+		<body>
+
+
+
+<!-- image manager -->
+<div id="manager-container">
+		<div id="button-container"></div>
+		<a id="link"></a>
+	</div>
+
+	<script id="btn-template" type="text/template">
+		<div id="container"></div>
+    </script>
+
+
+
+ 	<!-- select location modal -->
+	<div id="modal-container"></div> 
+
+	<script id="location-template" type="text/template">
+		<div id="location-box">
+			<div id="input-container">
+				<input type="text" id="location-input"  name="location" />
+			</div>
+				<div id="input-footer">
+					<div id="input-enter">ENTER</div>
+					<div id="input-cancel">CANCEL</div>
+				</div>
+			</div>
+	 </script>		 
+
+
+
+	<!-- main container & sidebar -->		   
+<div id="main-container"> 
+    <div id="side-bar">
+    	<div id="sidebar-box">
+    	<h3>BILL BORGES</h3>
+    	<h3>PHOTOGRAPHY</h3>
+			<ul id="side-list">
+				  <li class="list-item"><a href="#home">HOME</a></li>
+				  <li class="list-item"><a href="#portraits">PORTRAITS</a></li>
+				  <li class="list-item"><a href="#personal">PERSONAL</a></li>
+				  <li class="list-item"><a href="#editorial">EDITORIAL</a></li>
+				  <li class="list-item"><a href="#contact">CONTACT + ABOUT</a></li>
+				  <li class="list-item"><a href="#manager">ALBUM MANAGER</a></li>
+				</ul>
+	<span id="icons-container">
+	<a href="http://www.facebook.com/bill.borges.71?fref=ts"><img src="icons/fb.ico" class="social-media"></a>
+	<a href="https://www.thumbtack.com/fl/miami/videographers/photography-guillermoes"><img src="icons/th.png" class="social-media"></a>
+	<a href="https://guillermoestalent.smugmug.com/"><img src="icons/sm.png" class="social-media"></a>
+	<a href="https://www.youtube.com/channel/UCZyxbkxWjcBpJieoFlYBk7w"><img src="icons/yt2.png" class="social-media"></a>
+	</span>
+		</div>
+	</div>
+</div>
+
+	
+
+<!-- home page -->
+<div id="home-page"></div>
+
+<script id="home-template" type="text/template">
+	<h1 id="front-title">BILL BORGES PHOTOGRAPHY</h1>
+	<div id="home-image"> <img src="assets/bill5.jpg"> </div>
+</script>	
+
+
+<!-- sliders -->
+<div id="portrait-slider"> </div>
+<div id="personal-slider"> </div>
+<div id="editorial-slider"></div>
+
+<!-- image template -->
+<script id="portrait-template" type="text/template"> 
+	<div class="portrait-image"> <%= portrait_image %> </div> 
+</script> 
+
+
+  <!-- contact -->
+<div id="contact-container"></div>
+
+<script id="contact-template" type="text/template">
+	<div id="contact-image"> <img src="assets/contact.jpg"></div>
+	<div id="info-box">
+		<p class="contact-info">
+		   12080 SW 127 AV Suite B179
+		   <br>
+		   Miami, Florida 33186
+		   <br>
+		   TEL: (305)206-6068
+		   <br>
+		   E-mail: <a href="mailto:billborges@ymail.com">billborges@ymail.com</a>
+		   <br>
+		   facebook: 
+		   <a href="https://www.facebook.com/bill.borges.71?fref=ts">facebook.com/bill.borges.71?fref=ts </a>
+	    </p>   
+	</div>
+	<div id="about-box">
+		<p>
+		  Bill Borges Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <br> 
+	        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<br> 
+	      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in incididunt<br>
+	      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut<br> 
+	      labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco<br> 
+	      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
+		</p>
+	</div>
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="lib/jquery.js"></script>
+<script src="lib/underscore.js"></script>
+<script src="lib/backbone.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/models.js"></script>
+<script src="js/collections.js"></script>
+<script src="js/views.js"></script>
+<script src="js/routers.js"></script>
+
+
+
+	<script>
+		new App.Router;
+		Backbone.history.start(); 
+		App.photos = new App.Collections.Photos();
+		App.photos.fetch();
+		new App.Views.App({collection: App.photos});
+	</script>
+
+
+
+
+
+
+	</body>
+</html>

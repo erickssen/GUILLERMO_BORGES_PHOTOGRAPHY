@@ -1,0 +1,470 @@
+
+ body{
+ 	font-family: sans-serif;
+    margin: 0px;
+ }
+
+ img{
+    width:100%;
+    height:100%;
+ }
+
+ li{
+    list-style:none;
+ }
+
+
+ #container{
+ 	z-index: 9999;
+    position: fixed;
+    top: 500px;
+    left: 70px;
+ }
+
+ #link{
+    margin: 0;
+    position: absolute;
+    left: 430px;
+    top: 235px;
+ }
+
+ #main-container{
+ 	position: relative;
+    top: 0px;
+    left: 0px;
+    height: 590px;
+ }
+
+/*side bar*/
+#side-bar{
+	position: fixed;
+    margin-left: 50px;
+    top: 0px;
+    height: 100%;
+    width: 230px;
+    margin-right: 20px;
+    background-color: white;
+    z-index: 1000;
+    opacity: 0.97;
+    padding-top: 25px;
+    padding-right: 60px;
+}
+
+#sidebar-box{
+
+}
+
+ #side-bar h3{
+ 	position: relative;
+    top: 60px;
+    font-weight: 100;
+    font-size: 26px;
+    font-family: Times New Roman, serif;
+    margin: 0 auto;
+    padding-left: 20px;
+ }
+
+#side-list{
+    margin-top: 90px;
+    padding:0px;
+    padding-left: 20px;
+}
+
+.list-item a{
+	color:black;
+	text-decoration:none;
+}
+
+
+.list-item{
+	margin-top: 10px;
+    font-size: 10px;
+}
+
+/*portrait slider*/
+#portrait-slider{
+	position: absolute;
+    top: calc(50% - 500px/2);
+    left: 60px;
+    margin-left: 280px;
+    width: 12400px;
+    z-index: -1;
+}
+
+  .portrait-image{
+	margin-right: 1px;
+    float: left;
+}
+
+.portrait-image img{
+	width: auto;
+    height: 500px;
+    display: block;
+}
+
+/*personal-slider*/
+#personal-slider{
+    position: absolute;
+    top: calc(50% - 500px/2);
+    left: 60px;
+    margin-left: 280px;
+    width: 12400px;
+    z-index: -1;
+}
+
+/*personal-slider*/
+#editorial-slider{
+    position: absolute;
+    top: calc(50% - 500px/2);
+    left: 60px;
+    margin-left: 280px;
+    width: 12400px;
+    z-index: -1;
+}
+
+/*home*/
+#home-page{
+    position: relative;
+    background-color: white;
+    height: 600px;
+}
+
+#home-image{
+    width: auto;
+    height: auto;
+    top: 0%;
+    left: calc(50% - 1033px/2);
+    position: absolute;
+    cursor: pointer;
+}
+
+ #front-title{
+    position: absolute;
+    margin: 0;
+    top: 539px;
+    left: calc(50% - 710px/2);
+    height: 30px;
+    width: 710px;
+    z-index: 9999999;
+    font-family: monospace;
+    font-weight: 100;
+    letter-spacing: 16px;
+}
+
+/*location modal*/
+#modal-container{
+    position: absolute;
+    left: calc(50% - 400px/2);
+    top: 30%;
+    width: 400px;
+    height: 200px;
+}
+ 
+
+#input-container{
+    position: absolute;
+    top: 70px;
+    left: calc(50% - 300px/2);
+    width: 300px;
+    height: 40px;
+}
+
+#location-box{
+    position: fixed;
+    left: calc(50% - 182px/2);
+    top: 48%;
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+    z-index: 99999;
+}
+
+#input-footer{
+    position: absolute;
+    top: 110px;
+    left: 100px;
+    width: 200px;
+}
+
+#location-input{
+    width: 300px;
+    height: 25px;
+}
+
+#input-enter{
+    position: absolute;
+    width: 55px;
+    padding: 10px;
+    color: white;
+}
+
+#input-cancel{
+    position: absolute;
+    width: 55px;
+    padding: 10px;
+    color: white;
+    left: 130px;
+    top: 0px;
+}
+
+#input-enter:hover{
+    cursor:pointer;
+    opacity:0.7;
+}
+
+#input-cancel:hover{
+    cursor:pointer;
+    opacity:0.7;
+}
+
+
+
+/*photo manager*/
+#manager-container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5000px;
+    height: 100%;
+    background-color: gray;
+}
+
+#manager-container img{
+    height: 80px;
+    width: auto;
+    left: 427px;
+    top: 49px;
+    position: relative;
+    cursor: pointer;
+    transition: all 400ms ease-in;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #B1B7BD;
+    z-index:2;
+}
+
+#manager-container img:hover{
+     border-color: rgba(0, 0, 0, 0.84);
+     transform:scale(.9);
+     opacity:2;
+}
+
+.social-media{
+    width: auto;
+    height: 17px;
+    margin-right: 10px;
+    position: relative;
+    left: 20px;
+    /* display: block; */
+    top: 220px;
+    margin-top: 10px;
+}
+
+#contact-container{
+    position: absolute;
+    width: 1300px;
+    height: 700px;
+    top: 0px;
+    left: 0px;
+}
+
+#contact-image{
+    position: absolute;
+    height: 350px;
+    width: 700px;
+    left: 360px;
+    top: 13%;
+    overflow: hidden;
+}
+
+#info-box {
+    position: fixed;
+    left: 34px;
+    top: 310px;
+    z-index: 9999;
+}
+
+#info-box a{
+    color: black;
+    text-decoration:none;
+}
+
+#about-box{
+   position: absolute;
+    left: calc(50% - 518px/2);
+    top: 430px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: .0em;
+    margin: 2.5em 54px -1.8em 34px;
+}
+
+.contact-info{
+    font-size: 11.5px;
+    line-height: 22px;
+    letter-spacing: .0em;
+    margin: 2.5em 54px -1.8em 34px;
+}
+
+
+
+/*
+  
+@media(max-width: 736px){
+
+#sidebar-box {
+    margin-top: 0px;
+    margin-left: 35px;
+}
+
+.social-media {
+    left: 130px;
+    top: 600px;
+}
+
+.portrait-image img {
+    height: 1100px;
+    display: block;
+}
+
+#portrait-slider {
+    top: 53%;
+    left: 760px;
+    margin-left: 280px;
+}
+
+#personal-slider {
+    top: 53%;
+    left: 600px;
+    margin-left: 400px;
+}
+
+#editorial-slider {
+    top: 53%;
+    left: 600px;
+    margin-left: 400px;
+}
+
+#container {
+    top: 1200px;
+    left: 312px;
+}   
+
+
+}
+ */
+
+@media(max-width: 1024px){   
+
+#portrait-slider{
+    top: 78%;
+    left: 760px;
+    margin-left: 280px;
+}
+
+ #main-container{
+    height: 4090px; 
+ }
+
+.portrait-image img{
+    height: 1900px;
+    display: block;
+}
+
+#side-bar{
+    margin-left: 150px;
+    width: 630px;
+    top: 0px;
+}
+
+#sidebar-box {
+   margin-top: 848px;
+}
+
+ #side-bar h3{
+    top: 60px;
+    font-size: 80px;
+ }
+
+#side-list{
+    margin-top: 200px;
+}
+
+.list-item{
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.social-media {
+    width: auto;
+    height: 75px;
+    left: 20px;
+    top: 500px;
+}
+
+#personal-slider {
+    top: 80%;
+    left: 600px;
+    margin-left: 400px;
+}
+
+#editorial-slider {
+    top: 80%;
+    left: 600px;
+    margin-left: 400px;
+}
+
+
+
+#manager-container{
+    width: 5000px;
+    height: 4090px;
+}
+
+#manager-container img {
+    height: 300px;
+    left: 1100px;
+    top: 800px;
+}
+
+#container {
+    top: 2440px;
+    left: 280px;
+}
+
+#contact-image {
+    position: absolute;
+    height: 298px;
+    width: 600px;
+    left: calc(50% - 966px/2);
+    top: 0%;
+    z-index: 9999;
+}
+
+#contact-container {
+   position: absolute;
+    width: 1160px;
+    height: 62%;
+    top: 121px;
+    left: 76px;
+}
+
+#info-box {
+    position: absolute;
+    left: 74px;
+    top: 571px;
+    z-index: 9999;
+    height: 200px;
+}
+
+
+#about-box{
+    z-index: 1002;
+    left: 103px;
+    top: 312px;
+    margin: 2.5em 3px 1.2em 9px;
+}
+
+
+}
