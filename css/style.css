@@ -142,9 +142,9 @@
     position: absolute;
     margin: 0;
     top: 539px;
-    left: calc(50% - 710px/2);
+    left: calc(50% - 900px/2);
     height: 30px;
-    width: 710px;
+    width: 930px;
     z-index: 9999999;
     font-family: monospace;
     font-weight: 100;
