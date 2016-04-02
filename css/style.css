@@ -142,7 +142,7 @@
     position: absolute;
     margin: 0;
     top: 539px;
-    left: calc(50% - 900px/2);
+    left: calc(50% - 700px/2);
     height: 30px;
     width: 930px;
     z-index: 9999999;
