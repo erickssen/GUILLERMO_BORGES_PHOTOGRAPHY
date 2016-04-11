@@ -61,7 +61,7 @@ App.Views.LoadImages = Backbone.View.extend({
 
 	                vent.trigger('location:edit');
 	     		},
- 		   linkType: 'direct'
+ 		   linkType: 'preview'
 	     })
 		 document.getElementById('container').appendChild(button);
 	},
