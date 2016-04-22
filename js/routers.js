@@ -9,9 +9,9 @@ App.Router = Backbone.Router.extend({
 
 		'portraits': 'portraitPage',
 
-		'personal': 'personalPage',
+		'architecture': 'personalPage', 
 
-		'editorial': 'editorialPage',
+		'comercial': 'editorialPage',
 
 		'manager':'managerWindow',
 

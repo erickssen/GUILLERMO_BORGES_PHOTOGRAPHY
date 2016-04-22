@@ -53,17 +53,19 @@ App.Views.LoadImages = Backbone.View.extend({
 	            	
 	                var linkTag = document.getElementById('link');
 	                linkTag.href = files[0].link;
+	                var x = linkTag.href.slice(11)
+	                console.log(' <img src=" '+ "dl" + x + ' "> ')
 	                linkTag.textContent = files[0].link;
 	                App.photos.create({
-	                	portrait_image: ' <img src=" ' + linkTag + ' "> ',
+	                	portrait_image:' <img src=" '+ "https://dl" + x + ' "> ',      
 	                	location: '',
 	                }, {wait: true});
-
-	                vent.trigger('location:edit');
+	                vent.trigger('location:edit');	
 	     		},
- 		   linkType: 'preview'
+ 		   linkType: 'preview',
+ 		   multiselect: false
 	     })
-		 document.getElementById('container').appendChild(button);
+		 document.getElementById('container').appendChild(button);	 
 	},
 
 });
@@ -213,7 +215,7 @@ App.Views.Personals = Backbone.View.extend({
 	},
 
 	addOne: function(item){
-		if(item.attributes.location === 'personal'){
+		if(item.attributes.location === 'architecture'){
 			var personal = new App.Views.Portrait({model: item});
 			this.$el.append(personal.render().el);
 		}
@@ -254,7 +256,7 @@ App.Views.Editorial = Backbone.View.extend({
 	},
 
 	addOne: function(item){
-		if(item.attributes.location === 'editorial'){
+		if(item.attributes.location === 'comercial'){ 
 			var personal = new App.Views.Portrait({model: item});
 			this.$el.append(personal.render().el);
 		}
