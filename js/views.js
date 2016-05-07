@@ -54,7 +54,6 @@ App.Views.LoadImages = Backbone.View.extend({
 	                var linkTag = document.getElementById('link');
 	                linkTag.href = files[0].link;
 	                var x = linkTag.href.slice(11)
-	                console.log(' <img src=" '+ "dl" + x + ' "> ')
 	                linkTag.textContent = files[0].link;
 	                App.photos.create({
 	                	portrait_image:' <img src=" '+ "https://dl" + x + ' "> ',      
@@ -113,9 +112,11 @@ App.Views.Home = Backbone.View.extend({
 	},
 
 	enterSite: function(){
-		 window.location.replace('#portraits');
-		 vent.trigger('portraits:render');
+		 window.location.replace('#architecture');
+
+		 vent.trigger('personal:show');
 		 $('#side-bar').show();
+
 	}
 
 
@@ -195,7 +196,7 @@ App.Views.Portraits = Backbone.View.extend({
 
 
 
-/*personal slider*/
+/*personal slider*//*architecture*/
 App.Views.Personals = Backbone.View.extend({
 
 	el: '#personal-slider',
@@ -227,9 +228,11 @@ App.Views.Personals = Backbone.View.extend({
 	},
 
 	show: function(){
+		$('#home-page').hide(); 
 		$('#manager-container').hide();
 		$('#portrait-slider').hide();
 		$('#editorial-slider').hide();
+		$('#main-container').show();
 		this.$el.show();
 	},
 
@@ -237,7 +240,7 @@ App.Views.Personals = Backbone.View.extend({
 
 
 
-/*editorial slider*/
+/*editorial slider*/ /*comercial*/
 App.Views.Editorial = Backbone.View.extend({
 
 	el: '#editorial-slider',

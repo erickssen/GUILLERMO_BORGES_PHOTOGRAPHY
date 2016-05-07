@@ -23,7 +23,7 @@ App.Router = Backbone.Router.extend({
 
 
 	homePage: function(){
-		vent.trigger('portraits:hide'); 
+		vent.trigger('personal:hide'); 
 		vent.trigger('home:render');
 	},
 
