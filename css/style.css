@@ -102,17 +102,17 @@
     display: block;
 }
 
-/*personal-slider*/
+/*architecture-slider*/
 #personal-slider{
     position: absolute;
     top: calc(50% - 500px/2);
     left: 60px;
     margin-left: 280px;
-    width: 12400px;
+    width: 16000px;
     z-index: -1;
 }
 
-/*personal-slider*/
+/*comercial-slider*/    
 #editorial-slider{
     position: absolute;
     top: calc(50% - 500px/2);
