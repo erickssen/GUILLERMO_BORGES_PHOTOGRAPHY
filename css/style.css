@@ -290,14 +290,15 @@
 }
 
 #about-box{
-   position: absolute;
-    left: calc(50% - 518px/2);
+    position: absolute;
+    left: calc(50% - 869px/2);
     top: 430px;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 22px;
-    letter-spacing: .0em;
-    margin: 2.5em 54px -1.8em 34px;
+    letter-spacing: 0em;
+    margin: 2.5em 348px -0.8em 141px;
+    width: 704px;
 }
 
 .contact-info{
