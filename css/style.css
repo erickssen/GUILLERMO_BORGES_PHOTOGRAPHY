@@ -133,7 +133,7 @@
     width: auto;
     height: auto;
     top: 0%;
-    left: calc(50% - 1033px/2);
+    /*left: calc(50% - 1033px/2);*/
     position: absolute;
     cursor: pointer;
 }
@@ -147,8 +147,9 @@
     width: 930px;
     z-index: 9999999;
     font-family: monospace;
-    font-weight: 100;
+    font-weight: 700;
     letter-spacing: 16px;
+    color:white;
 }
 
 /*location modal*/
