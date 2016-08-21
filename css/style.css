@@ -133,7 +133,6 @@
     width: auto;
     height: auto;
     top: 0%;
-    /*left: calc(50% - 1033px/2);*/
     position: absolute;
     cursor: pointer;
 }
@@ -141,7 +140,7 @@
  #front-title{
     position: absolute;
     margin: 0;
-    top: 539px;
+    top: 311px;
     left: calc(50% - 700px/2);
     height: 30px;
     width: 930px;
@@ -149,7 +148,7 @@
     font-family: monospace;
     font-weight: 700;
     letter-spacing: 16px;
-    color:white;
+   
 }
 
 /*location modal*/
