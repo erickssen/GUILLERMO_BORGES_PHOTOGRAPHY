@@ -21,6 +21,9 @@ App.Views.App = Backbone.View.extend({
 
 			var contact = new App.Views.Contact();
 
+			 
+			
+
 			
 	},
 
@@ -96,7 +99,6 @@ App.Views.Home = Backbone.View.extend({
 
 	hide: function(){
 		$('#home-page').hide();
-		
 	},
 
 	show: function(){
@@ -127,10 +129,6 @@ App.Views.Home = Backbone.View.extend({
 App.Views.Portrait = Backbone.View.extend({
 
 	template: App.template('portrait-template'),
-
-	events:{
-		'dblclick':'removeImage',
-	},
 
 
 	initialize: function(){
@@ -207,7 +205,6 @@ App.Views.Personals = Backbone.View.extend({
 		vent.on('personal:show', this.show, this);
 		vent.on('personal:hide', this.hide, this);
 		vent.on('personal:addOne', this.addOne, this);
-		
 	},
 
 	render: function(){
@@ -313,11 +310,14 @@ App.Views.InputView = Backbone.View.extend({
 
 
 	enterLocation: function(){
-		var input = $('#location-input').val();
-		var last = App.photos.last();
+
+		var input = $('input[name=modal]:checked').val()
+
+	 	var last = App.photos.last();
+
 		last.save({
 			location: input,
-		});
+		}); 
 		this.$el.hide(); 
 	},
 
@@ -337,6 +337,10 @@ App.Views.InputView = Backbone.View.extend({
 
 /*manager image viewer */
 App.Views.Manager = Backbone.View.extend({
+
+	events:{
+		'dblclick':'removeImage',  
+	},
 
 	el: '#manager-container',
 
@@ -361,12 +365,21 @@ App.Views.Manager = Backbone.View.extend({
 		$('#personal-slider').hide();
 		$('#editorial-slider').hide();
 		this.$el.show();
-	},
+	},  
 
 	addOne: function(item){
 		var image = new App.Views.Portrait({model: item});
 		this.$el.append(image.render().el);
 	},
+
+	removeImage: function(e){
+
+		App.photos.each(function(item){
+			var x = new App.Views.Portrait({model: item});
+			$(e.target).remove();
+			x.removeImage(e)
+		})  
+	}, 
 
 
 });
