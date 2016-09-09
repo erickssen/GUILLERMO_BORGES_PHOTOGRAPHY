@@ -1,5 +1,7 @@
 App.Views.App = Backbone.View.extend({
 
+
+
 	initialize: function(){
 
 			vent.on('location:edit', this.editLocation, this);
@@ -20,18 +22,19 @@ App.Views.App = Backbone.View.extend({
 			var button = new App.Views.Dropbox();
 
 			var contact = new App.Views.Contact();
-
-			 
-			
-
 			
 	},
+
+
 
 	editLocation: function(location){
 		var selectLocation = new App.Views.InputView({model: location});
 		selectLocation.showView();
 		$('#contact-box').html(selectLocation.render());
 	},
+
+
+	 
 
 });              
 
@@ -130,10 +133,17 @@ App.Views.Portrait = Backbone.View.extend({
 
 	template: App.template('portrait-template'),
 
+	events:{
+		'click .thumb-btn': 'removeImage'
+	},
+
 
 	initialize: function(){
 		this.listenTo(this.model, 'change', this.render);
 		this.listenTo(this.model, 'add', this.render);
+		vent.on('image:delete', this.removeImage, this)
+
+		
 	},
 
 	render: function(){
@@ -141,11 +151,14 @@ App.Views.Portrait = Backbone.View.extend({
 		return this
 	},
 
+
 	removeImage: function(e){
-		$(e.target).remove();
-		this.$el.remove();
+
+		$(e.target).remove() 
+		this.$el.remove()
 		this.model.destroy();
 	},
+
 
 });
 
@@ -181,6 +194,7 @@ App.Views.Portraits = Backbone.View.extend({
 	},
 
 	show: function(){
+		$('.thumb-btn').hide()
 		$('#manager-container').hide();
 		$('#home-page').hide();
 		$('#main-container').show();
@@ -225,6 +239,7 @@ App.Views.Personals = Backbone.View.extend({
 	},
 
 	show: function(){
+		$('.thumb-btn').hide()
 		$('#home-page').hide(); 
 		$('#manager-container').hide();
 		$('#portrait-slider').hide();
@@ -268,6 +283,7 @@ App.Views.Editorial = Backbone.View.extend({
 	},
 
 	show: function(){
+		$('.thumb-btn').hide()
 		$('#manager-container').hide();
 		$('#personal-slider').hide();
 		$('#portrait-slider').hide();
@@ -339,7 +355,7 @@ App.Views.InputView = Backbone.View.extend({
 App.Views.Manager = Backbone.View.extend({
 
 	events:{
-		'dblclick':'removeImage',  
+		// 'click .thumb-btn': 'removeImage'
 	},
 
 	el: '#manager-container',
@@ -348,6 +364,7 @@ App.Views.Manager = Backbone.View.extend({
 		this.listenTo(this.collection, 'add', this.addOne);
 		vent.on('manager:show', this.show, this); 
 		vent.on('manager:hide', this.hide, this);
+		 
 	},
 
 	render: function(){
@@ -360,6 +377,7 @@ App.Views.Manager = Backbone.View.extend({
 	},
 
 	show: function(){
+		$('.thumb-btn').show()
 		$('#contact-container').hide();
 		$('#portrait-slider').hide();
 		$('#personal-slider').hide();
@@ -372,13 +390,11 @@ App.Views.Manager = Backbone.View.extend({
 		this.$el.append(image.render().el);
 	},
 
-	removeImage: function(e){
 
-		App.photos.each(function(item){
-			var x = new App.Views.Portrait({model: item});
-			$(e.target).remove();
-			x.removeImage(e)
-		})  
+	removeImage: function(e){  
+
+		 vent.trigger('image:delete');
+		 $(e.target).remove()
 	}, 
 
 
