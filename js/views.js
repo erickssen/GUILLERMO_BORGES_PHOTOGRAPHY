@@ -437,6 +437,7 @@ App.Views.Contact = Backbone.View.extend({
 	},
 
 	show: function(){
+		$('.thumb-btn').hide()
 		$('#portrait-slider').hide();
 		$('#personal-slider').hide();
 		$('#editorial-slider').hide();

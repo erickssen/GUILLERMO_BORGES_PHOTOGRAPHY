@@ -13,7 +13,7 @@
  .thumb-btn {
     position: relative;
     top: 49px;
-    width: 51px;
+    width: 92px;
     left: 427px;
     height: 28px;
     font-weight: 100;
@@ -23,7 +23,7 @@
     border-width: 1px;
     border-color: white;
     cursor: pointer;
-    z-index: 1200;
+    z-index: 1;
   }
 
 
@@ -251,13 +251,12 @@
 }
 
 #manager-container img{
-    height: 80px;
-    width: auto;
+    height: 90px;
+    width: 90px;
     left: 427px;
     top: 49px;
     position: relative;
-    cursor: pointer;
-    transition: all 400ms ease-in;
+    transition: all 400ms ease-in; 
     border-width: 1px;
     border-style: solid;
     border-color: #B1B7BD;
