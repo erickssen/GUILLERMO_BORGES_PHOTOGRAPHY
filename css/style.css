@@ -10,21 +10,24 @@
  }
 
 
- .thumb-btn {
+ .thumb-btn{
     position: relative;
-    top: 49px;
-    width: 92px;
-    left: 427px;
+    top: -48px;
+    width: 25px;
+    left: 491px;
     height: 28px;
-    font-weight: 100;
-    color: white;
-    background-color: rgba(48, 79, 254, 0.46);
+    font-weight: 500;
+    font-size: 25px;
+    font-family: cursive;
+    color: #02ff6d;
+    background-color: rgba(48, 79, 254, 0);
     border-style: solid;
-    border-width: 1px;
+    border-width: 0px;
     border-color: white;
     cursor: pointer;
-    z-index: 1;
-  }
+    z-index: 2;
+}
+  
 
 
 
@@ -137,7 +140,7 @@
     top: calc(50% - 500px/2);
     left: 60px;
     margin-left: 280px;
-    width: 12400px;
+    width: 18400px;
     z-index: -1;
 }
 
