@@ -140,9 +140,9 @@
     top: calc(50% - 500px/2);
     left: 60px;
     margin-left: 280px;
-    width: 18400px;
+    width: 28400px;
     z-index: -1;
-}
+} 
 
 /*home*/
 #home-page{
