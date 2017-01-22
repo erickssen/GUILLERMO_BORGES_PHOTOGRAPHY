@@ -109,11 +109,11 @@
     top: calc(50% - 500px/2);
     left: 60px;
     margin-left: 280px;
-    width: 12400px;
+    width: 18400px;
     z-index: -1;
 }
 
-  .portrait-image{
+.portrait-image{
 	margin-right: 1px;
     float: left;
 }
@@ -130,7 +130,7 @@
     top: calc(50% - 500px/2);
     left: 60px;
     margin-left: 280px;
-    width: 16000px;
+    width: 18400px;
     z-index: -1;
 }
 
