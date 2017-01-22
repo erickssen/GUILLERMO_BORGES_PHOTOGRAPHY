@@ -22,8 +22,10 @@ App.Views.App = Backbone.View.extend({
 			var button = new App.Views.Dropbox();
 
 			var contact = new App.Views.Contact();
+
+			var reviews = new App.Views.Reviews();
 			
-	},
+	}, 
 
 
 
@@ -113,6 +115,7 @@ App.Views.Home = Backbone.View.extend({
 		$('#manager-container').hide();
 		$('#contact-container').hide();
 		$('#contact-image').hide();
+		$('#reviews-page').hide()
 		$('#home-page').show();
 	},
 
@@ -200,6 +203,7 @@ App.Views.Portraits = Backbone.View.extend({
 		$('#main-container').show();
 		$('#personal-slider').hide();
 		$('#editorial-slider').hide();
+		$('#reviews-page').hide()
 		$('#side-list').show();
 		this.$el.show();
 	}
@@ -244,6 +248,7 @@ App.Views.Personals = Backbone.View.extend({
 		$('#manager-container').hide();
 		$('#portrait-slider').hide();
 		$('#editorial-slider').hide();
+		$('#reviews-page').hide()
 		$('#main-container').show();
 		this.$el.show();
 	},
@@ -287,6 +292,7 @@ App.Views.Editorial = Backbone.View.extend({
 		$('#manager-container').hide();
 		$('#personal-slider').hide();
 		$('#portrait-slider').hide();
+		$('#reviews-page').hide()
 		this.$el.show();
 	}
 
@@ -382,6 +388,7 @@ App.Views.Manager = Backbone.View.extend({
 		$('#portrait-slider').hide();
 		$('#personal-slider').hide();
 		$('#editorial-slider').hide();
+		$('#reviews-page').hide()
 		this.$el.show();
 	},  
 
@@ -419,6 +426,7 @@ App.Views.Dropbox = Backbone.View.extend({
 	}
 });
 
+
 /*contact view*/
 App.Views.Contact = Backbone.View.extend({
 
@@ -441,6 +449,7 @@ App.Views.Contact = Backbone.View.extend({
 		$('#portrait-slider').hide();
 		$('#personal-slider').hide();
 		$('#editorial-slider').hide();
+		$('#reviews-page').hide()
 		this.$el.show();
 		this.render();
 	},
@@ -448,5 +457,54 @@ App.Views.Contact = Backbone.View.extend({
 	hide: function(){
 		this.$el.hide();
 	}
+
+});
+
+
+
+
+
+App.Views.Reviews = Backbone.View.extend({
+
+	el: '#reviews-page',
+
+	template: App.template('reviews-template'),
+
+	events:{
+		 
+	},
+
+
+	initialize: function(){
+		vent.on('review:show', this.show, this)
+		this.show();
+		this.render();
+	},
+
+	render: function(){
+		this.$el.html(this.template);
+		return this
+	},
+
+
+	show: function(){
+		$('#portrait-slider').hide();
+		$('#editorial-slider').hide();
+		$('#personal-slider').hide();
+		$('#manager-container').hide();
+		$('#contact-container').hide();
+		$('#contact-image').hide();
+		$('#home-page').hide();
+		$('#side-bar').show();
+		$('#reviews-page').show()
+	},
+
+
+	 
+
+		 
+
+	
+
 
 });

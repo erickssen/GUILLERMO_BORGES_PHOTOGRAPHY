@@ -15,7 +15,9 @@ App.Router = Backbone.Router.extend({
 
 		'manager':'managerWindow',
 
-		'contact':'contactPage'
+		'contact':'contactPage',
+
+		'reviews': 'reviewPage',
 
 	},
 
@@ -61,6 +63,10 @@ App.Router = Backbone.Router.extend({
 		vent.trigger('contact:show');
 		vent.trigger('manager:hide');
 
+	},
+
+	reviewPage: function(){
+		vent.trigger('review:show')
 	}
 
 
