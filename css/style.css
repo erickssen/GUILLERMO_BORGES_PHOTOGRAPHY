@@ -1,18 +1,16 @@
 
-iframe{
-    margin-top: -546px;
-    border-right-color:#9a9a9a;
-    border-width: 1px;
-    width:800px;
-    height:800px;
-    display:block;
-    margin-left:calc(50% - 650px/2);
+.review-img{
+    margin-top: -386px;
+    width: 906px;
+    height: auto;
+    margin-left: calc(50% - 710px/2);
+    padding: 10px;
 
 }
 
 
 #reviews-page{
-
+    margin-top: -270px;
 }
 
  body{
